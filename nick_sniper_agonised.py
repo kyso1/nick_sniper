@@ -1,5 +1,4 @@
 import json 
-import psutil
 from aiohttp import BodyPartReader
 from lcu_driver import Connector
 from time import sleep
@@ -7,6 +6,7 @@ connector = Connector()
 @connector.ready
 
 async def connect(connection):
+    headers = {"Content-Type": "application/json"}
     nick = []
     counter = 1
     print("\nNick Sniper its ready!")
@@ -29,15 +29,21 @@ async def connect(connection):
                     riot_points = essences_data.get('RP')
                     if(blue_essences>=13900):     
                         print("Nick found and conditions met (RP or BE sufficients) ! Attempting to change the nick to:", nick)
-                        response = await connection.request('put', '/lol-summoner/v1/current-summoner/name', data=json.dumps({"name": nick}))
-                        print("Nick changed successfully! 13900 BE Spent")
+                        response = await connection.request('post','/lol-summoner/v1/current-summoner/name', data=json.dumps({"name": nick}), headers = headers)
+                        if(response.status==200):
+                            print("Nick changed successfully! 13900 BE Spent")
+                        else:
+                            print("Internal server error, please change the nick manually.")
                         print("\n")
                         input("Press Enter to end the program...")
                         exit(0)
                     elif(riot_points>=1300):
                         print("Nick found and conditions met (RP or BE sufficients) ! Attempting to change the nick to:", nick)
-                        response = await connection.request('put', '/lol-summoner/v1/current-summoner/name', data=json.dumps({"name": nick}))
-                        print("Nick changed successfully! 1300 RP Spent")
+                        response = await connection.request('post', '/lol-summoner/v1/current-summoner/name', data=json.dumps({"name": nick}),headers = headers)
+                        if(response.status==200):    
+                            print("Nick changed successfully! 1300 RP Spent")
+                        else:
+                            print("Internal server error, please change the nick manually.")
                         print("\n")
                         input("Press Enter to end the program...")
                         exit(0)
