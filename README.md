@@ -15,6 +15,6 @@ I recommend to just snipe the nick with 5 hours or less to it be open, to see so
 going to be available, you can use this site:
 https://lols.gg/
 
-# Att
+# Updates
 v1.1
 The endpoint to attempt to change the nickname apparently does not exists anymore, but the try is there!
