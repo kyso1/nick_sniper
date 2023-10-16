@@ -9,9 +9,9 @@ on your terminal.
 To run the program you need to be with the League Client open, or it will not work
 I recommend to just snipe the nick with 5 hours or less to it be open, to see some nicks that are
 going to be available, you can use this site:
-https://lols.gg/
-https://lolnames.gg/
-https://www.nameslol.com/ (NO BR SERVER SUPPORT)
+- https://lols.gg/
+- https://lolnames.gg/
+- https://www.nameslol.com/ (NO BR SERVER SUPPORT)
 
 # Updates
 v1.1
