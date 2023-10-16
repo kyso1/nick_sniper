@@ -1,0 +1,5 @@
+platform
+requests
+lcu_driver
+beautifulsoup4
+pygame
