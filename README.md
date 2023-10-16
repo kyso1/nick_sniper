@@ -16,6 +16,7 @@ going to be available, you can use this site:
 # Updates
 v1.1
 The endpoint to attempt to change the nickname apparently does not exists anymore, but the try is there!
+
 v2.0
 Added some new features, like:
 - Notify sound when the nick be able to change;
