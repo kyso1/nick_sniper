@@ -31,3 +31,7 @@ To install just run this command on powershell:
 
 To run the program, just run:
 `start.bat` file.
+
+
+# Disclaimer
+Due to new league Riot ID "nicks", this code probably don't work. So if you want to test, its by your own risk.
